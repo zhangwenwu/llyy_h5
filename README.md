@@ -1,8 +1,10 @@
 # llyy-h5
 
-> A Vue.js project
+> 基于webpack+vue+vue-cli构建的项目
 
-> 主要用到vue+vue-cli+vuex+vue-router+axios
+> vuex+vue-router+axios
+
+> 熟悉过程中有什么不懂的可以提Issues,一起学习吧
 
 ## Build Setup
 
