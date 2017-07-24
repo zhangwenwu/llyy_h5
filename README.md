@@ -2,6 +2,8 @@
 
 > A Vue.js project
 
+> 主要用到vue+vue-cli+vuex+vue-router+axios
+
 ## Build Setup
 
 ``` bash
