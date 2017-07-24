@@ -4,7 +4,7 @@
 
 > vuex+vue-router+axios
 
-> 熟悉过程中有什么不懂的可以提Issues,一起学习吧
+> 熟悉过程中有什么不懂的可以提Issues,一起学习吧！！
 
 ## Build Setup
 
