@@ -5,7 +5,7 @@
     <div class='xqlb_tc' @click='close_tc()' v-show='tc_show'>
       <div class="msg-window">
           <div class="message" @click.stop='tc()'>
-            <div class='lb' @click.stop='lb(tbs.label,tbs.value)' v-for='tbs in tb'>{{tbs.label}}</div>
+            <div class='lb' @click.stop='lb(tbs,tbs.value)' v-for='tbs in tb'>{{tbs}}</div>
           </div>
         </div>
     </div>
@@ -152,7 +152,7 @@
         one_show: true,                     //第一步显示
         two_show: false,                    //第二步显示
         three_show: false,                  //第三步显示
-        tb:[],                              //需求类别数据
+        tb:['环评','环境检测','环保工程','项目验收','应急预案','清洁生产','ISO14001认证','环保设备','环保配件','材料药剂','其他'],                                 //需求类别数据
         tb_value:[],                        //需求类别数据英文
         img_true: false,                    //第二步第一个选中图片
         img_true2: false,                   //第二步第二个选中图片              
@@ -265,6 +265,8 @@
          }else if(this.$refs.yzm.value == ''){
             alert('请输入手机验证码');
          }else{
+            this.two_show = true;
+            this.one_show = false;
             this.$axios({   
                 method: 'post',
                 url: 'http://219.135.58.197:8888/llhb/m/verification/validateCode',
@@ -360,6 +362,7 @@
       },
       three_but:function(){                 //第三步确定发布事件
         if(confirm("确定发布吗?")){
+            alert('发布成功');
            this.$axios({   
                 method: 'post',
                 url: 'http://wy.tunnel.qydev.com/llhb/m/requirement/saveRequirement',

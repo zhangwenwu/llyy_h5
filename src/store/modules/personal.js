@@ -7,7 +7,10 @@ import * as types from '../mutation-types'
 const state = {
   imgAndName: {},
   myRequirement: {},
-  myOrder: {}
+  myOrder: {
+    11:'123',
+    11:'123',
+  }
 }
 
 const getters = {

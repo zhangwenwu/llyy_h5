@@ -43,8 +43,8 @@
 	        }else if(this.$refs.password.value == ''){
 	        	alert('请输入密码');
 	        }else{
-
-	        	 this.$axios({
+	        	 this.$router.push({path:'/personal/personal'})
+	        	 /*this.$axios({
 		            method: 'post',
 		            url: 'http://219.135.58.197:8888/llhb/m/login',
 		            params:{
@@ -64,7 +64,7 @@
 
 		        		alert(response.data.logErr);
 		        	}
-		        })
+		        })*/
 	        }
 	    }
 	  }

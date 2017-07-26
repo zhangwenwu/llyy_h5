@@ -5,7 +5,7 @@
    <div class='xqlb_tc' @click='close_tc()' v-show='tc_show'>
       <div class="msg-window">
           <div class="message" @click.stop='tc()'>
-            <div class='lb' @click.stop='lb(tbs.label,tbs.value)' v-for='tbs in tb'>{{tbs.label}}</div>
+            <div class='lb' @click.stop='lb(tbs,tbs.value)' v-for='tbs in tb'>{{tbs}}</div>
           </div>
         </div>
     </div>
@@ -70,11 +70,11 @@
         </tr>
 		  </tbody>
 	 </table>
-	 <pager
+	 <!-- <pager
         mode="params"
         route-name="pageRoute"
         :total-page="totalPage"
-        :init-page="paramsPage"></pager>
+        :init-page="paramsPage"></pager> -->
   <div class="our-order">
     <router-link to="/recommend"><img src="../../assets/img/construction/order.png"></router-link>
   </div>
@@ -97,7 +97,7 @@
                 paramsPage: 1,
                 totalPage: 10,
                 tc_show: false,                     //需求类别弹窗显示
-                tb:[],                             //需求类别数据
+                tb:['环评','环境检测','环保工程','项目验收','应急预案','清洁生产','ISO14001认证','环保设备','环保配件','材料药剂','其他'],                             //需求类别数据
                 fl:'选择分类',
                 imgSrc: require('../../assets/img/construction/big-graph.png'),
                 titles:'环保工程',
@@ -165,14 +165,14 @@
               /*this.tb_value = d;*/
             },
             xqlb: function () {                   //第一步需求类别点击事件
-              this.$axios({     
+              /*this.$axios({     
                   method: 'post',
                   url: 'http://219.135.58.197:8888/llhb/m/requirement/allCategory',
                })
               .then((response) => {
                   this.tb = response.data.categorys;
                   console.log(response.data.categorys);
-              })
+              })*/
               this.tc_show = true;
             },
             one_diqu:function(e,d,f){    //选择地区

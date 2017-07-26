@@ -11,13 +11,13 @@
       <div class="tab-view-div">
         <div class="tab-view" v-for="(value,key,index) in tabView" v-if="tabIndex===index">
           <div class="tab-view-list" v-for="item in value" >
-            <img :src="item.img"/>
+            <img :src="item.small_img"/>
             <div class="tab-view-left">
-              <div class="list-title">{{item.title}}</div>
+              <div class="list-title">{{item.new_title}}</div>
               <div class="list-msg">{{item.msg}}</div>
               <div class="list-bottom">
-                <div class="list-date">{{item.date}}</div>
-                <div class="list-fromId">{{item.fromId}}</div>
+                <div class="list-date">{{item.time}}</div>
+                <div class="list-fromId">{{item.source}}</div>
               </div>
             </div>
           </div>
@@ -45,37 +45,37 @@
               msg: '东莞计划通过实施VOCS总量控制和区域限批等创新举措根治污染源，力求...',
               date: '2017-05-03',
               fromId: '东莞环保网',
-              img: require('../../assets/img/consult/tab_pic.png')
+              img: '../../static/img/consult/tab_pic.png'
             },
             {title: '2017年东莞臭氧浓度要达标',
               msg: '东莞计划通过实施VOCS总量控制和区域限批等创新举措根治污染源，力求...',
               date: '2017-05-03',
               fromId: '东莞环保网',
-              img: require('../../assets/img/consult/tab_pic.png')
+              img: '../../static/img/consult/tab_pic.png'
             },
             {title: '2017年东莞臭氧浓度要达标',
               msg: '东莞计划通过实施VOCS总量控制和区域限批等创新举措根治污染源，力求...',
               date: '2017-05-03',
               fromId: '东莞环保网',
-              img: require('../../assets/img/consult/tab_pic.png')
+              img: '../../static/img/consult/tab_pic.png'
             },
             {title: '2017年东莞臭氧浓度要达标',
               msg: '东莞计划通过实施VOCS总量控制和区域限批等创新举措根治污染源，力求...',
               date: '2017-05-03',
               fromId: '东莞环保网',
-              img: require('../../assets/img/consult/tab_pic.png')
+              img: '../../static/img/consult/tab_pic.png'
             },
             {title: '2017年东莞臭氧浓度要达标',
               msg: '东莞计划通过实施VOCS总量控制和区域限批等创新举措根治污染源，力求...',
               date: '2017-05-03',
               fromId: '东莞环保网',
-              img: require('../../assets/img/consult/tab_pic.png')
+              img: '../../static/img/consult/tab_pic.png'
             },
             {title: '2017年东莞臭氧浓度要达标',
               msg: '东莞计划通过实施VOCS总量控制和区域限批等创新举措根治污染源，力求...',
               date: '2017-05-03',
               fromId: '东莞环保网',
-              img: require('../../assets/img/consult/tab_pic.png')
+              img: '../../static/img/consult/tab_pic.png'
             }
           ],
           'tabViewList_1': [
@@ -83,7 +83,7 @@
               msg: '东莞计划通过实施VOCS总量控制和区域限批等创新举措根治污染源，力求...',
               date: '2017-05-03',
               fromId: '东莞环保网',
-              img: require('../../assets/img/consult/tab_pic.png')
+              img: '../../static/img/consult/tab_pic.png'
             }
           ],
           'tabViewList_2': [
@@ -91,14 +91,14 @@
               msg: '东莞计划通过实施VOCS总量控制和区域限批等创新举措根治污染源，力求...',
               date: '2017-05-03',
               fromId: '东莞环保网',
-              img: require('../../assets/img/consult/tab_pic.png')
+              img: '../../static/img/consult/tab_pic.png'
             }
           ]
         }
       }
     },
     mounted () {
-      /*this.$nextTick(function () {
+      this.$nextTick(function () {
          this.$axios({     
                 method: 'post',
                 url: 'http://219.135.58.197:8888/llhb/m/zixun/zixunInformation',
@@ -109,7 +109,7 @@
             .then((response) => {
               this.tabView.tabViewList_0 = response.data.zixuniInfo
             })
-      })*/
+      })
     },
     methods: {
       tabClick: function (index) {

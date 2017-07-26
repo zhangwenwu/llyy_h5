@@ -6,7 +6,7 @@
         <img :src="headImg"/>
         <p>{{imgAndName.login_name}}</p>
       </div>
-      <div v-if="peopleSort=='1'" class="personal-list">
+      <div class="personal-list">
         <router-link to="/myRequirement/personage">
           <div>
             <img class="icon-pic" src="../../assets/img/personal/my_requirement.png"/>
@@ -22,7 +22,7 @@
           </div>
         </router-link>
       </div>
-      <div v-if="peopleSort=='2'" class="personal-list">
+      <div class="personal-list">
         <router-link to="/myRequirement/company">
           <div>
             <img class="icon-pic" src="../../assets/img/personal/requirement_manage.png"/>
@@ -57,12 +57,12 @@
       return {
         viewHeight: 0, // 获取窗口高度
         peopleSort: this.$route.params.sort,
-        headImg: '',
+        headImg: require('../../assets/img/consult/tab_pic.png'),
         userId: ''
       }
     },
     mounted () {
-      this.$nextTick(function () {
+      /*this.$nextTick(function () {
         this.viewHeight = document.querySelector('html').getAttribute('data-dpr') * window.screen.height - document.getElementsByClassName('header-top')[0].clientHeight - document.getElementsByClassName('footer-bar')[0].clientHeight
         let userId = JSON.parse(this.$cookie.getCookie('user')).userId
         this.$store.dispatch('getImgAndName', userId)
@@ -71,7 +71,7 @@
         } else {
           this.headImg = require('../../assets/img/personal/pensonal_top.jpg')
         }
-      })
+      })*/
     }
   }
 </script>
