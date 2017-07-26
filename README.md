@@ -6,7 +6,7 @@
 
 > 预览地址:https://zhangwenwu.github.io/llyy_h5/dist/index.html#/
 
-> 熟悉过程中有什么不懂的可以提Issues,一起学习吧！！
+> 熟悉过程中有什么不懂的可以提Issues,一起学习吧！！!
 
 ## Build Setup
 
